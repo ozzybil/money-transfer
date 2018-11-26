@@ -1,0 +1,26 @@
+server:
+
+    applicationConnectors:
+      - type: http
+        port: 8090
+    adminConnectors:
+      - type: http
+        port: 8091
+    requestLog:
+        appenders: []
+
+logging:
+
+    level: INFO
+
+    appenders:
+      - type: console
+        threshold: ALL
+        target: stdout
+        logFormat: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n"
+
+      - type: file
+        threshold: ALL
+        currentLogFilename: ./logs/money-transfer-app.log
+        archivedLogFilenamePattern: ./logs/money-transfer-app-%d.log.gz
+        logFormat: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n"
