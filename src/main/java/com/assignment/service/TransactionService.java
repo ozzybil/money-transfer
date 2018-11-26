@@ -18,7 +18,7 @@ public class TransactionService {
     }
 
     /**
-     * First make validations and then performs deposit operation on given account
+     * First validates the request and then performs deposit operation on given account
      * Guards balance of the account from concurrent modifications via accounts implicit monitor
      *
      * @param account object to perform deposit
@@ -49,7 +49,7 @@ public class TransactionService {
     }
 
     /**
-     * First make validations then performs withdraw operation on given account
+     * First validates the request then performs withdraw operation on given account
      * Guards balance of the account from concurrent modifications via accounts implicit monitor
      *
      * @param account object to perform withdrawal
@@ -80,7 +80,7 @@ public class TransactionService {
     }
 
     /**
-     * First make validations on both account then performs transfer operation
+     * First makes validations on both account then performs transfer operation
      * Guards balance of the accounts from concurrent modifications via their implicit monitors
      *
      * @param from object to perform deposit
