@@ -12,6 +12,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Collection;
 
+/**
+ * Contains all endpoints for transaction related calls
+ */
 @Path("/transaction")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
@@ -24,7 +27,6 @@ public class TransactionResource extends ResourceBase {
         this.transactionService = transactionService;
         this.accountDao = accountDao;
     }
-
 
     @GET
     @Path("/all")
