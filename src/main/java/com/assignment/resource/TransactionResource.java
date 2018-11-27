@@ -13,7 +13,7 @@ import javax.ws.rs.core.Response;
 import java.util.Collection;
 
 /**
- * Contains all endpoints for transaction related calls
+ * Contains all endpoints for transaction based calls
  */
 @Path("/transaction")
 @Produces(MediaType.APPLICATION_JSON)
